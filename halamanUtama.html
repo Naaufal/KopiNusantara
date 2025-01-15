@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kopi Nusantara</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;0,800;1,200;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#home" class="navLogo">KopiNusantara.</a>
+      <div class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#kontak">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-extra">
+        <button
+          class="ctaButton"
+          onclick="window.location.href='pemesanan.html'"
+        >
+          Pesan Sekarang
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="slider">
+        <div
+          class="slide active"
+          style="background-image: url(img/slider1.png)"
+        ></div>
+        <div class="slide" style="background-image: url(img/slider2.jpg)"></div>
+        <div class="slide" style="background-image: url(img/slider3.jpg)"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="aboutContainer">
+        <div class="aboutText">
+          <h2 class="aboutTitle">Tentang Kami</h2>
+          <p class="textAbout">
+            Kopi Nusantara adalah rumah bagi pecinta kopi yang ingin menikmati
+            cita rasa terbaik dari berbagai daerah di Indonesia. Dengan bahan
+            baku berkualitas tinggi dan metode penyeduhan tradisional maupun
+            modern, kami berkomitmen untuk menghadirkan pengalaman kopi yang tak
+            terlupakan. Kami percaya bahwa setiap biji kopi memiliki cerita, dan
+            kami ada untuk membagikannya kepada Anda.
+          </p>
+          <p class="textAbout">
+            Di Kopi Nusantara, kami tidak hanya menyajikan kopi, tetapi juga
+            menciptakan ruang bagi Anda untuk berbagi momen, inspirasi, dan
+            kebahagiaan. Selamat datang di keluarga kami!
+          </p>
+        </div>
+        <div class="aboutImage">
+          <img src="img/about.jpg" alt="Tentang Kami" class="imageAbout" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Proses Kopi -->
+    <section class="prosesKopi" id="prosesKopi">
+      <div class="prosesContainer">
+        <h2 class="prosesTitle">Perjalanan Secangkir Kopi</h2>
+        <div class="prosesStep">
+          <div class="stepProses">
+            <div class="stepIcon">
+              <i data-feather="sunset"></i>
+            </div>
+            <h3>Pemilihan Biji</h3>
+            <p>
+              Kami memilih biji kopi terbaik dari perkebunan di seluruh
+              Indonesia.
+            </p>
+          </div>
+          <div class="stepProses">
+            <div class="stepIcon">
+              <i data-feather="target"></i>
+            </div>
+            <h3>Roasting</h3>
+            <p>
+              Proses roasting dilakukan dengan presisi untuk mengoptimalkan cita
+              rasa.
+            </p>
+          </div>
+          <div class="stepProses">
+            <div class="stepIcon">
+              <i data-feather="coffee"></i>
+            </div>
+            <h3>Penyeduhan</h3>
+            <p>
+              Setiap cangkir diseduh dengan metode terbaik sesuai dengan
+              karakteristik biji kopi.
+            </p>
+          </div>
+          <div class="stepProses">
+            <div class="stepIcon">
+              <i data-feather="trending-up"></i>
+            </div>
+            <h3>Kualitas</h3>
+            <p>Komitmen kami pada kualitas ada di setiap tahap proses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+      <h2 class="menuTitle">Menu Populer Hari ini</h2>
+      <div class="menuContainer">
+        <div class="kolomMenu">
+          <div class="menuItem">
+            <h3>Drip Coffe</h3>
+            <p class="menuPrice">22.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Cold Brew</h3>
+            <p class="menuPrice">27.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Espresso</h3>
+            <p class="menuPrice">15.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Americano</h3>
+            <p class="menuPrice">20.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>V60</h3>
+            <p class="menuPrice">20.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Cappucino</h3>
+            <p class="menuPrice">25.000</p>
+          </div>
+        </div>
+        <div class="kolomMenu">
+          <div class="menuItem">
+            <h3>Mocktail</h3>
+            <p class="menuPrice">25.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Jasmine Tea</h3>
+            <p class="menuPrice">15.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Tea</h3>
+            <p class="menuPrice">15.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Chocolate Frappe</h3>
+            <p class="menuPrice">20.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Matcha Latte</h3>
+            <p class="menuPrice">25.000</p>
+          </div>
+          <div class="menuItem">
+            <h3>Red Velvet</h3>
+            <p class="menuPrice">25 .000</p>
+          </div>
+        </div>
+      </div>
+      <div class="menuCTA">
+        <a href="pemesanan.html" class="menuCta">Pesan Sekarang</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="kontak" id="kontak">
+      <h2 class="kontakTitle">Hubungi Kami</h2>
+      <div class="kontakContainer">
+        <div class="kontakForm">
+          <form action="#" method="post">
+            <div class="formGrup">
+              <label for="name">Nama</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan Nama Anda"
+                required
+              />
+            </div>
+            <div class="formGrup">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Masukkan Email Anda"
+                required
+              />
+            </div>
+            <div class="formGrup">
+              <label for="pesan">Pesan</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="5"
+                placeholder="Tulis Pesan Anda Disini"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="kontakBtn">Kirim Pesan</button>
+          </form>
+        </div>
+        <div class="infoKontak">
+          <h3>Kontak Kami</h3>
+          <p>Alamat: Jalan kebahagiaan, cikarang timur</p>
+          <p>Email: info@kopinusantara.com</p>
+          <p>Telepon: +62 812 5454 7676</p>
+          <p>Jam Operasional: 08:00 - 00:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="footerContainer">
+        <div class="kolomFooter">
+          <h3>Tentang Kopi Nusantara</h3>
+          <p>
+            Kopi Nusantara adalah tempat terbaik untuk menikmati kopi asli dari
+            berbagai daerah Indonesia. Kami menyediakan pengalaman kopi
+            berkualitas tinggi dengan suasana yang hangat dan ramah.
+          </p>
+        </div>
+        <div class="kolomFooter">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="#menu">Drip Coffee</a></li>
+            <li><a href="#menu">Espresso</a></li>
+            <li><a href="#menu">Cappuccino</a></li>
+            <li><a href="#menu">Matcha Latte</a></li>
+            <li><a href="#menu">Cold Brew</a></li>
+          </ul>
+        </div>
+        <div class="kolomFooter">
+          <h3>Kontak</h3>
+          <p>Alamat: Jalan kebahagiaan, Jakarta</p>
+          <p>Email: info@kopinusantara.com</p>
+          <p>Telepon: +62 812 5454 676</p>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <p>&copy; 2024 Kopi Nusantara. All Rights Reserved.</p>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

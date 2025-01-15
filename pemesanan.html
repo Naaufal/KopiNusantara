@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu KopiNusantara.</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;0,800;1,200;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/stylepage2.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+      <a href="halamanUtama.html" class="navLogo">KopiNusantara.</a>
+      <div class="nav">
+        <ul>
+          <li><a href="halamanUtama.html#home">Home</a></li>
+          <li><a href="halamanUtama.html#about">About Us</a></li>
+          <li><a href="#" class="aktif">Menu</a></li>
+          <li><a href="halamanUtama.html#kontak">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Memilih Meja -->
+
+    <section class="pilihMeja" id="pilihMeja">
+      <div class="mejaContainer">
+        <div class="mejaPilihan">
+          <h2 class="mejaTitle">Silahkan Pilih Meja</h2>
+          <div class="gridMeja">
+            <div class="meja" data-meja="1">
+              <h3>meja 1</h3>
+              <p>2 orang</p>
+            </div>
+            <div class="meja" data-meja="2">
+              <h3>meja 2</h3>
+              <p>2 orang</p>
+            </div>
+            <div class="meja" data-meja="3">
+              <h3>meja 3</h3>
+              <p>2 orang</p>
+            </div>
+            <div class="meja" data-meja="4">
+              <h3>meja 4</h3>
+              <p>6 orang</p>
+            </div>
+            <div class="meja" data-meja="5">
+              <h3>meja 5</h3>
+              <p>4 orang</p>
+            </div>
+            <div class="meja" data-meja="6">
+              <h3>meja 6</h3>
+              <p>4 orang</p>
+            </div>
+            <div class="meja" data-meja="7">
+              <h3>meja 7</h3>
+              <p>2 orang</p>
+            </div>
+            <div class="meja" data-meja="8">
+              <h3>meja 8</h3>
+              <p>3 orang</p>
+            </div>
+            <div class="meja" data-meja="9">
+              <h3>meja 9</h3>
+              <p>8 orang</p>
+            </div>
+            <div class="meja" data-meja="10">
+              <h3>meja 10</h3>
+              <p>2 orang</p>
+            </div>
+          </div>
+          <button
+            class="tombolMenu"
+            onclick="tampilkanMenu()"
+            disabled
+            id="lanjutKeMenu"
+          >
+            Lanjut ke menu
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU & KERANJANG -->
+    <section class="menu" id="menu" style="display: none">
+      <div class="menuContainer">
+        <div class="menuSection">
+          <h2 class="menuTitle">Menu Kami</h2>
+          <div class="searchFilter">
+            <div class="menuSearch">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari menu.."
+                oninput="cariMenu(this.value)"
+              />
+            </div>
+            <div class="filterKategori">
+              <button onclick="filterMenu('all')">Semua</button>
+              <button onclick="filterMenu('kopi')">Kopi</button>
+              <button onclick="filterMenu('nonkopi')">Non Kopi</button>
+              <button onclick="filterMenu('pastry')">Pastry</button>
+              <button onclick="filterMenu('mainDish')">Main Dish</button>
+            </div>
+          </div>
+
+          <div class="listMenu">
+            <!-- Menudata -->
+          </div>
+        </div>
+
+        <div class="keranjang">
+          <h2 class="keranjangTitle">Pesanan Anda</h2>
+          <div class="mejaTerpilih">
+            <h3>Meja <span id="noMeja">-</span></h3>
+          </div>
+          <div class="daftarPesanan">
+            <!-- cartdata -->
+          </div>
+          <div class="totalKeranjang">
+            <h3>total : Rp. <span id="totalBelanja">0</span></h3>
+          </div>
+          <button class="tombolPesan" onclick="openPayment()" disabled>
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+      <div class="modalContent">
+        <span class="close" onclick="closePayment()">&times;</span>
+        <h2>Select Payment Method</h2>
+        <div class="paymentMethods">
+          <div class="paymentMethod" onclick="selectPayment('qr')">
+            <img src="img/iconQr.png" alt="QR" />
+            <span>QR Payment</span>
+          </div>
+          <div class="paymentMethod" onclick="selectPayment('card')">
+            <img src="img/iconDebit.png" alt="Card" />
+            <span>Card Payment</span>
+          </div>
+          <div class="paymentMethod" onclick="selectPayment('cash')">
+            <img src="img/iconCash.png" alt="Cash" />
+            <span>Cash Payment</span>
+          </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="paymentDetails">
+          <!-- QR Payment -->
+          <div id="qrPayment" class="paymentDetail" style="display: none">
+            <h3>Scan QR Code</h3>
+            <img src="img/QR.webp" alt="QR Code" class="qrCode" />
+            <p>Scan this QR code with your mobile payment app</p>
+            <button class="tombol" onclick="processPayment('qr')">
+              Confirm QR Payment
+            </button>
+          </div>
+
+          <!-- Card Payment -->
+          <div id="cardPayment" class="paymentDetail" style="display: none">
+            <h3>Card Details</h3>
+            <form id="cardForm">
+              <input type="text" placeholder="Card Number" required />
+              <div class="cardExtra">
+                <input type="text" placeholder="MM/YY" required />
+                <input type="text" placeholder="CVV" required />
+              </div>
+              <button type="submit" class="tombol">Pay Now</button>
+            </form>
+          </div>
+
+          <!-- Cash Payment -->
+          <div id="cashPayment" class="paymentDetail" style="display: none">
+            <h3>Cash Payment</h3>
+            <p>Please prepare the exact amount:</p>
+            <h4>Rp. <span id="cashAmount">0</span></h4>
+            <button class="tombol" onclick="processPayment('cash')">
+              Confirm Payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/pemesanan.js"></script>
+  </body>
+</html>
