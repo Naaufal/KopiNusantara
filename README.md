@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/71da7c03-e313-4d55-b75f-8c0f650cf1bd)# KopiNusantara.
+# KopiNusantara.
 Kopi Nusantara sebuah coffee shop yang mengangkat keunikan dan kekayaan cita rasa biji kopi Indonesia dengan pendekatan modern dan "brutal" dalam hal intensitas rasa dan metode penyajiannya. Berlokasi di kawasan strategis, Kopi Nusantara hadir sebagai destinasi bagi para pecinta kopi yang menginginkan pengalaman menikmati biji kopi dari berbagai penjuru nusantara dengan cara yang berbeda dan memorable.
 
 # Penentuan Ide Proyek
@@ -40,20 +40,24 @@ pada bagian database kami mempunyai beberapa tabel, yaitu :
 1. Meja
    
 ![image](https://github.com/user-attachments/assets/7ff2068b-649f-4521-a5be-25f25ccfaf9b)
+
 Tabel ini berfungsi sebagai penampung data meja, dimana status meja disini akan berubah menjadi terisi bila ada user yang sudah memilih meja.
 
 3. Menu
    
 ![image](https://github.com/user-attachments/assets/4efd7342-df41-4f74-9a00-b22b75b4b60b)
+
 Tabel ini berfungsi sebagai database menu, dimana data menu berada. disini owner atau pegawai coffeshop kopi nusantara bisa  menambah, mengurangi, dan mengubah menu.
 
 data menu kami : 
+
 ![image](https://github.com/user-attachments/assets/7c2808b1-e4c9-40ba-bb65-6d40d5abb234)
 
 
 5. orders
    
 ![image](https://github.com/user-attachments/assets/2e5326ba-a370-47ee-afd3-32e0447c2cb3)
+
 Tabel ini berfungsi sebagai penampung dari orderan yang masuk, dimana jika user sudah menyelesaikan pembayaran orderan akan masuk ke dalam tabel ini.
 
 
